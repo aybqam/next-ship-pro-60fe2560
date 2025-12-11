@@ -1,5 +1,7 @@
 import { Check, Anchor } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import portImage from "@/assets/port.jpg";
+import teamImage from "@/assets/team.jpg";
 
 const features = [
   "أسطول حديث من السفن والحاويات",
@@ -14,6 +16,24 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
+        {/* Image Gallery */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img 
+              src={portImage} 
+              alt="ميناء الشحن" 
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img 
+              src={teamImage} 
+              alt="فريق العمل" 
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>

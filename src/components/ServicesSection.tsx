@@ -1,4 +1,6 @@
 import { Ship, Package, Globe, Truck, Shield, Clock } from "lucide-react";
+import cargoShip from "@/assets/cargo-ship.jpg";
+import containers from "@/assets/containers.jpg";
 
 const services = [
   {
@@ -37,6 +39,15 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
+        {/* Featured Image Banner */}
+        <div className="mb-16 rounded-3xl overflow-hidden shadow-xl">
+          <img 
+            src={cargoShip} 
+            alt="سفينة شحن حاويات" 
+            className="w-full h-64 md:h-80 object-cover"
+          />
+        </div>
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-4">
@@ -51,7 +62,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div
               key={index}
@@ -90,6 +101,15 @@ const ServicesSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Containers Image */}
+        <div className="rounded-3xl overflow-hidden shadow-xl">
+          <img 
+            src={containers} 
+            alt="حاويات الشحن" 
+            className="w-full h-64 md:h-80 object-cover"
+          />
         </div>
       </div>
     </section>
