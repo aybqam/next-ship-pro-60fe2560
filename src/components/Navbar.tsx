@@ -17,8 +17,8 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "#home", label: "الرئيسية" },
-    { href: "#services", label: "خدماتنا" },
     { href: "#about", label: "من نحن" },
+    { href: "#services", label: "خدماتنا" },
     { href: "#contact", label: "اتصل بنا" },
   ];
 
