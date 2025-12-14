@@ -16,27 +16,41 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        {/* Image Gallery */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src={portImage} 
-              alt="ميناء الشحن" 
-              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src={teamImage} 
-              alt="فريق العمل" 
-              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
+          {/* Images - Left Side */}
+          <div className="order-2 lg:order-1">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src={portImage} 
+                    alt="ميناء الشحن" 
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-primary to-ocean p-6 text-center">
+                  <div className="text-4xl font-bold text-primary-foreground mb-1">+25</div>
+                  <div className="text-primary-foreground/80 text-sm">سنة خبرة</div>
+                </div>
+              </div>
+              <div className="space-y-4 mt-8">
+                <div className="rounded-2xl overflow-hidden shadow-lg bg-accent/20 p-6 text-center">
+                  <div className="text-4xl font-bold text-accent mb-1">+10K</div>
+                  <div className="text-foreground/80 text-sm">عميل سعيد</div>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src={teamImage} 
+                    alt="فريق العمل" 
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Content - Right Side */}
+          <div className="order-1 lg:order-2">
             <span className="inline-block bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-4">
               من نحن
             </span>
@@ -62,50 +76,17 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <Button variant="accent" size="lg">
-              تعرف علينا أكثر
-            </Button>
-          </div>
-
-          {/* Visual Element */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-primary to-ocean rounded-3xl p-8 md:p-12 relative overflow-hidden">
-              {/* Decorative Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-primary-foreground rounded-full -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-60 h-60 bg-primary-foreground rounded-full translate-y-1/2 -translate-x-1/2" />
-              </div>
-
-              <div className="relative z-10">
-                <Anchor className="h-16 w-16 text-accent mb-8" />
-                
-                {/* Stats */}
-                <div className="space-y-8">
-                  <div>
-                    <div className="text-5xl font-bold text-primary-foreground mb-2">+10,000</div>
-                    <div className="text-primary-foreground/70">عميل سعيد</div>
-                  </div>
-                  <div>
-                    <div className="text-5xl font-bold text-primary-foreground mb-2">+500,000</div>
-                    <div className="text-primary-foreground/70">شحنة تم تسليمها</div>
-                  </div>
-                  <div>
-                    <div className="text-5xl font-bold text-primary-foreground mb-2">99.5%</div>
-                    <div className="text-primary-foreground/70">نسبة رضا العملاء</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl shadow-xl p-6 hidden md:block">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
-                  <Check className="h-6 w-6 text-accent-foreground" />
+            <div className="flex flex-wrap gap-4">
+              <Button variant="accent" size="lg">
+                تعرف علينا أكثر
+              </Button>
+              <div className="flex items-center gap-3 bg-card rounded-xl px-4 py-2 shadow-md">
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
+                  <Check className="h-5 w-5 text-accent-foreground" />
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">معتمدون دولياً</div>
-                  <div className="text-muted-foreground text-sm">ISO 9001:2015</div>
+                  <div className="font-bold text-foreground text-sm">معتمدون دولياً</div>
+                  <div className="text-muted-foreground text-xs">ISO 9001:2015</div>
                 </div>
               </div>
             </div>
