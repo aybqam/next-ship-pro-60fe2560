@@ -77,7 +77,11 @@ const AboutSection = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="accent" size="lg">
+              <Button 
+                variant="accent" 
+                size="lg"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 تعرف علينا أكثر
               </Button>
               <div className="flex items-center gap-3 bg-card rounded-xl px-4 py-2 shadow-md">
