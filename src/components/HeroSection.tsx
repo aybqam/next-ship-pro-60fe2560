@@ -57,11 +57,19 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up [animation-delay:300ms]">
-            <Button variant="heroAccent" size="lg">
+            <Button 
+              variant="heroAccent" 
+              size="lg"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               احصل على عرض سعر
               <ArrowLeft className="h-5 w-5" />
             </Button>
-            <Button variant="hero" size="lg">
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               تعرف على خدماتنا
             </Button>
           </div>
